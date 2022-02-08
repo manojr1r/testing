@@ -10,15 +10,15 @@ public class ArrayListPra {
 		a1.add(1);
 		a1.add(2);
 		
-//		System.out.println(int k=a1.size());
+
 		for (int i=0; i<a1.size();i++) {
 			System.out.println(a1.get(i));
 		}
 		
 		System.out.println("lets try other way");
-
-		for (int j=a1.size(); j<a1.size();j--) {
-		System.out.println(a1.get(j));
+		System.out.println(int j=a1.size());
+//		for (int k=a1.size(); k<a1.size();k--) {
+//		System.out.println(a1.get(k));
 
 	}
 	}
