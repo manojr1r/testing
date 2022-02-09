@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class ArrayListPra {
+public class ArrayListPractice {
 
 	public static void main(String[] args) {
 		ArrayList<Integer> a1 = new ArrayList<Integer>();   //
