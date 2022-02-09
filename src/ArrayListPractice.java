@@ -21,7 +21,8 @@ public class ArrayListPractice {
 		}
 		
 		System.out.println("lets try other way");
-//		System.out.println(int j=a1.size()-1);
+		int j=a1.size();
+		System.out.println(j);
 		for (int k=a1.size()-1; k>=0;k--) {
 		System.out.println(a1.get(k));
 
