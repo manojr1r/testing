@@ -9,16 +9,21 @@ public class ArrayListPra {
 		
 		a1.add(1);
 		a1.add(2);
+		a1.add(3);
+		a1.add(3,4);
+		a1.add(null);
 		
+		a1.remove(2);//added value of 3rd index automatically moves above
+		System.out.println(a1.get(2)+" by get method");
 
 		for (int i=0; i<a1.size();i++) {
 			System.out.println(a1.get(i));
 		}
 		
 		System.out.println("lets try other way");
-		System.out.println(int j=a1.size());
-//		for (int k=a1.size(); k<a1.size();k--) {
-//		System.out.println(a1.get(k));
+//		System.out.println(int j=a1.size()-1);
+		for (int k=a1.size()-1; k>=0;k--) {
+		System.out.println(a1.get(k));
 
 	}
 	}
