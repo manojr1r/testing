@@ -8,8 +8,6 @@ public class SeleniumIntro {
 	public static void main(String[] args) {
 		
 		
-		
-		
 		// Invoking Browser
 		
 		/*
@@ -28,7 +26,7 @@ public class SeleniumIntro {
 		
 //		 System.setProperty("webdriver.chrome.driver", "D:\\Rahul\\chromedriver.exe");
 //		 System.setProperty("webdriver.gecko.driver",  "d:\\rahul\\geckodriver.exe");
-		 System.getProperty("webdriver.edge.drive",    "d:\\rahul\\msedgedriver.exe");
+		 System.setProperty("webdriver.edge.drive",    "d:\\rahul\\msedgedriver.exe");
 		  
 		
 		/*
