@@ -23,31 +23,37 @@ public class Validatetabs {
 		
 		WebElement lastBox =driver.findElement(By.xpath("//table/tbody/tr/td[1]/ul"));
 		int linksCount = (lastBox.findElements(By.tagName("a")).size());
-		System.out.println("no of links in area " +linksCount);
+		System.out.println("no of links in area " +linksCount +" including header.");
 		
 		
-//		Set<String> windows = driver.getWindowHandles();
-//		Iterator<String> window = windows.iterator();
-		
-		
-		for (int i=1; i<linksCount;i++) 
+		for (int i=0; i<linksCount;i++) 
 		{
 			
 			
 			lastBox.findElements(By.tagName("a")).get(i).sendKeys(Keys.chord(Keys.CONTROL,Keys.ENTER));
 			Thread.sleep(5000L);
 			
-			ArrayList<String> tabs2 = new ArrayList<String> (driver.getWindowHandles());
-		    driver.switchTo().window(tabs2.get(1));
-		    System.out.println(driver.getTitle());
+			Set<String> windows = driver.getWindowHandles();
+			Iterator<String> window = windows.iterator();
+			String parentId = window.next();
+			String childId = window.next();
+			
+			driver.switchTo().window(childId);
+			System.out.println(driver.getTitle());
 		    driver.close();
-		    driver.switchTo().window(tabs2.get(0));				
+		    driver.switchTo().window(parentId);
+		    
+//			ArrayList<String> tabs2 = new ArrayList<String> (driver.getWindowHandles());
+//		    driver.switchTo().window(tabs2.get(1));
+//		    System.out.println(driver.getTitle());
+//		    driver.close();
+//		    driver.switchTo().window(tabs2.get(0));				
 			
 			
 			
 		}
 		
-		
+		driver.quit();
 		
 
 	}
