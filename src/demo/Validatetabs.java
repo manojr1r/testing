@@ -29,6 +29,7 @@ public class Validatetabs {
 //		Set<String> windows = driver.getWindowHandles();
 //		Iterator<String> window = windows.iterator();
 		
+		
 		for (int i=1; i<linksCount;i++) 
 		{
 			
