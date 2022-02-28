@@ -24,9 +24,9 @@ public class SeleniumIntro {
 		 * 
 		 */
 		
-//		 System.setProperty("webdriver.chrome.driver", "D:\\Rahul\\chromedriver.exe");
+		 System.setProperty("webdriver.chrome.driver", "D:\\Rahul\\chromedriver.exe");
 //		 System.setProperty("webdriver.gecko.driver",  "d:\\rahul\\geckodriver.exe");
-		 System.setProperty("webdriver.edge.drive",    "d:\\rahul\\msedgedriver.exe");
+//		 System.setProperty("webdriver.edge.drive",    "d:\\rahul\\msedgedriver.exe");
 		  
 		
 		/*
@@ -38,14 +38,14 @@ public class SeleniumIntro {
 		 *		WebDriver driver = new ChromeDriver();
 		 */
 
-//        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new ChromeDriver();
 //        WebDriver driver =new FirefoxDriver();
-		  WebDriver driver = new EdgeDriver();
+//		  WebDriver driver = new EdgeDriver();
 		
 		driver.get("https://www.rahulshettyacademy.com");
 		System.out.println(driver.getTitle());
 		System.out.println(driver.getCurrentUrl());
-		driver.close(); //closes current window
+//		driver.close(); //closes current window
 		//driver.quit();  //will close all tabs opened within automation
 		
         }
