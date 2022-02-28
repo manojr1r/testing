@@ -33,6 +33,7 @@ public class Validatetabs {
 		for (int i=1; i<linksCount;i++) 
 		{
 			
+			
 			lastBox.findElements(By.tagName("a")).get(i).sendKeys(Keys.chord(Keys.CONTROL,Keys.ENTER));
 			Thread.sleep(5000L);
 			
