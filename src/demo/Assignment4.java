@@ -30,6 +30,7 @@ public class Assignment4 {
 		driver.switchTo().window(parentId);
 		System.out.println(driver.findElement(By.xpath("//div/h3")).getText());
 		
+		
 	}
 
 }

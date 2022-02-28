@@ -26,8 +26,8 @@ public class Validatetabs {
 		System.out.println("no of links in area " +linksCount);
 		
 		
-		Set<String> windows = driver.getWindowHandles();
-		Iterator<String> window = windows.iterator();
+//		Set<String> windows = driver.getWindowHandles();
+//		Iterator<String> window = windows.iterator();
 		
 		for (int i=1; i<linksCount;i++) 
 		{
