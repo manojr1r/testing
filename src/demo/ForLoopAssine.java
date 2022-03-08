@@ -12,6 +12,7 @@ public class ForLoopAssine {
 			}
 			
 			System.out.println("");
+			System.out.println(k);
 		}
 	}
 
