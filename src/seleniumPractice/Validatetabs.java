@@ -1,4 +1,4 @@
-package demo;
+package seleniumPractice;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -68,7 +68,6 @@ public class Validatetabs {
 		}
 
 		driver.quit();
-		System.out.println("merge");
 		
 
 
