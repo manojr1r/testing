@@ -68,6 +68,7 @@ public class Validatetabs {
 		}
 
 		driver.quit();
+		System.out.println("merge");
 		
 
 
