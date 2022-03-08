@@ -26,30 +26,44 @@ public class Validatetabs {
 		System.out.println("no of links in area " +linksCount);
 		
 		
-//		Set<String> windows = driver.getWindowHandles();
-//		Iterator<String> window = windows.iterator();
 		
 		
-		for (int i=1; i<linksCount;i++) 
+//		opening and closing one by one 
+		/*for (int i=1; i<linksCount;i++) 
 		{
 			
 			
 			lastBox.findElements(By.tagName("a")).get(i).sendKeys(Keys.chord(Keys.CONTROL,Keys.ENTER));
 			Thread.sleep(5000L);
+			Set<String> windows = driver.getWindowHandles();
+			Iterator<String> window = windows.iterator();
 			
 			ArrayList<String> tabs2 = new ArrayList<String> (driver.getWindowHandles());
 		    driver.switchTo().window(tabs2.get(1));
 		    System.out.println(driver.getTitle());
 		    driver.close();
 		    driver.switchTo().window(tabs2.get(0));				
+						
+		}*/
+		
+//		opening all the links at once in selected area and print one by one 
+		
+		for (int i=1; i<linksCount;i++) 
+		{
 			
 			
-			
+			lastBox.findElements(By.tagName("a")).get(i).sendKeys(Keys.chord(Keys.CONTROL,Keys.ENTER));
+		
 		}
+		Set<String> windows = driver.getWindowHandles();
+		Iterator<String> window = windows.iterator();
 		
-		
-		
-
+		while (window.hasNext()) 
+		{
+			String a = window.next();
+			driver.switchTo().window(a);
+			System.out.println(driver.getTitle());
+		}
 	}
 
 }
