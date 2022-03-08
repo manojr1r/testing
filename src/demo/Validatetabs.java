@@ -25,22 +25,15 @@ public class Validatetabs {
 		int linksCount = (lastBox.findElements(By.tagName("a")).size());
 		System.out.println("no of links in area " +linksCount +" including header.");
 		
-		
-
-		
-		
 //		opening and closing one by one 
-		/*for (int i=1; i<linksCount;i++) 
-
-		for (int i=0; i<linksCount;i++) 
-
+	
+	/*	for (int i=1; i<linksCount;i++)
 		{
 			
 			
 			lastBox.findElements(By.tagName("a")).get(i).sendKeys(Keys.chord(Keys.CONTROL,Keys.ENTER));
 			Thread.sleep(5000L);
-			Set<String> windows = driver.getWindowHandles();
-			Iterator<String> window = windows.iterator();
+			
 			
 			Set<String> windows = driver.getWindowHandles();
 			Iterator<String> window = windows.iterator();
@@ -50,18 +43,19 @@ public class Validatetabs {
 			driver.switchTo().window(childId);
 			System.out.println(driver.getTitle());
 		    driver.close();
-
-		    driver.switchTo().window(tabs2.get(0));				
-						
-		}*/
+		    driver.switchTo().window(parentId);
+				
+		}    */
+		
 		
 //		opening all the links at once in selected area and print one by one 
 		
 		for (int i=1; i<linksCount;i++) 
 		{
 			lastBox.findElements(By.tagName("a")).get(i).sendKeys(Keys.chord(Keys.CONTROL,Keys.ENTER));
-		
+		    
 		}
+		
 		Set<String> windows = driver.getWindowHandles();
 		Iterator<String> window = windows.iterator();
 		
@@ -80,3 +74,4 @@ public class Validatetabs {
 	}
 
 }
+
