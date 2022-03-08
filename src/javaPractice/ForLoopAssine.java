@@ -1,4 +1,4 @@
-package demo;
+package javaPractice;
 
 public class ForLoopAssine {
 

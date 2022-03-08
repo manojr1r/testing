@@ -1,4 +1,4 @@
-package demo;
+package seleniumPractice;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -25,13 +25,15 @@ public class Validatetabs {
 		int linksCount = (lastBox.findElements(By.tagName("a")).size());
 		System.out.println("no of links in area " +linksCount +" including header.");
 		
-		
-		for (int i=0; i<linksCount;i++) 
+//		opening and closing one by one 
+	
+	/*	for (int i=1; i<linksCount;i++)
 		{
 			
 			
 			lastBox.findElements(By.tagName("a")).get(i).sendKeys(Keys.chord(Keys.CONTROL,Keys.ENTER));
 			Thread.sleep(5000L);
+			
 			
 			Set<String> windows = driver.getWindowHandles();
 			Iterator<String> window = windows.iterator();
@@ -42,20 +44,34 @@ public class Validatetabs {
 			System.out.println(driver.getTitle());
 		    driver.close();
 		    driver.switchTo().window(parentId);
+				
+		}    */
+		
+		
+//		opening all the links at once in selected area and print one by one 
+		
+		for (int i=1; i<linksCount;i++) 
+		{
+			lastBox.findElements(By.tagName("a")).get(i).sendKeys(Keys.chord(Keys.CONTROL,Keys.ENTER));
 		    
-//			ArrayList<String> tabs2 = new ArrayList<String> (driver.getWindowHandles());
-//		    driver.switchTo().window(tabs2.get(1));
-//		    System.out.println(driver.getTitle());
-//		    driver.close();
-//		    driver.switchTo().window(tabs2.get(0));				
-			
-			
-			
 		}
 		
+		Set<String> windows = driver.getWindowHandles();
+		Iterator<String> window = windows.iterator();
+		
+
+		while (window.hasNext()) 
+		{
+			String a = window.next();
+			driver.switchTo().window(a);
+			System.out.println(driver.getTitle());
+		}
+
 		driver.quit();
 		
+
 
 	}
 
 }
+
