@@ -13,7 +13,7 @@ public class childSuper extends parentSuper {
 
 	public static void main(String[] args) {
 		parentSuper cls = new childSuper();
-		cls.ClassP0();;
+		cls.Class1();;
 	}
 
 }
