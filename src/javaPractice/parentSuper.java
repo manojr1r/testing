@@ -1,20 +1,20 @@
 package javaPractice;
 
-public class parentSuper {
+public class parentSuper extends childSuper{
 	
-	public void ClassP0()
+	public void P0Method()
 	{
-		System.out.println("Unique parentSuper class");
+		System.out.println("Unique parent Super class");
 	}
 	
-	public void Class1()
+	public void commonMethod()
 	{
-		System.out.println("common parentSuper class");
+		System.out.println("common parent Super class");
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
+		parentSuper obj = new parentSuper();
+		obj.commonMethod();
+		}
 
 }
