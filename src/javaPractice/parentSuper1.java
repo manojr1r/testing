@@ -4,8 +4,8 @@ public class parentSuper1 {
 public static void main(String[] args) {
 	parentSuper1 obj = new parentSuper1();
 	ClassPS1 obj1 = new ClassPS1();
-	childSuper obj2 = new parentSuper();
-//	obj.methodC1();
+	parentSuper obj2 = new parentSuper();
+//	obj.methodC1(); childSuper   parentSuper
 //	obj1.methodC0();
 	obj2.commonMethod();
 }
