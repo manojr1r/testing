@@ -1,6 +1,6 @@
 package javaPractice;
 
- public class childSuper extends ClassC0{
+ public class childSuper{
 public static void main(String[] args) {
 	ClassC1 cls = new ClassC1();
 	cls.methodC1();
