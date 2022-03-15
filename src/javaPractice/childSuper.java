@@ -29,7 +29,8 @@ public void commonMethod()
  }
 
 class  ClassC0{
-	 void methodC0()
+	int i=0;
+	 static void methodC0()
 		{
 			System.out.println("parent childsuper");
 		}
@@ -40,6 +41,7 @@ class  ClassC0{
 		{
 			System.out.println("method of ClassC1 Extended of ClassC0");
 		}
+	
 	}
 	
 	 class parentSuper extends ClassC1{
