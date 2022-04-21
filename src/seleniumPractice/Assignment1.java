@@ -20,7 +20,6 @@ public class Assignment1 {
 		Assert.assertFalse(driver.findElement(By.id("checkBoxOption1")).isSelected());
 		
 		System.out.println(driver.findElements(By.xpath("//label/input[contains(@value, 'option')]")).size());
-		
 	}
 
 }
