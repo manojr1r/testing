@@ -1,6 +1,8 @@
 package seleniumPractice;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -25,7 +27,7 @@ public class SeleniumIntro {
 		 * 
 		 */
 		
-		 System.setProperty("webdriver.chrome.driver", "D:\\Rahul\\chromedriver.exe");
+//		 System.setProperty("webdriver.chrome.driver", "D:\\Rahul\\chromedriver.exe");
 //		 System.setProperty("webdriver.gecko.driver",  "d:\\rahul\\geckodriver.exe");
 //		 System.setProperty("webdriver.edge.drive",    "d:\\rahul\\msedgedriver.exe");
 		  
@@ -39,10 +41,18 @@ public class SeleniumIntro {
 		 *		WebDriver driver = new ChromeDriver();
 		 */
 
-        WebDriver driver = new ChromeDriver();
+//        WebDriver driver = new ChromeDriver();
 //        WebDriver driver =new FirefoxDriver();
 //		  WebDriver driver = new EdgeDriver();
-		
+		ChromeOptions chromeOptions = new ChromeOptions();
+		chromeOptions.addArguments("--start-maximized");
+//		chromeOptions.addArguments("--remote-allow-origins=*");   // had an issue with webSockets in 4.8.1 JavaSelenium version
+
+		WebDriver driver = WebDriverManager.chromedriver().capabilities(chromeOptions).create();
+		if (driver instanceof ChromeDriver chromeDriver ){
+			chromeDriver.get("https://www.google.com");
+			System.out.println(driver.getTitle());
+		}
 		driver.get("https://www.rahulshettyacademy.com");
 		System.out.println(driver.getTitle());
 		System.out.println(driver.getCurrentUrl());

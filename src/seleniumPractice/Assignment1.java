@@ -12,6 +12,7 @@ public class Assignment1 {
 		
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
+
 		driver.get("https://rahulshettyacademy.com/AutomationPractice/");
 		
 		driver.findElement(By.id("checkBoxOption1")).click();
