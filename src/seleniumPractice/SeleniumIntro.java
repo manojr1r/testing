@@ -60,4 +60,5 @@ public class SeleniumIntro {
 		//driver.quit();  //will close all tabs opened within automation
 		
         }
+
 	}
