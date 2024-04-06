@@ -19,8 +19,7 @@ public class Locators {
 		driver.findElement(By.id("inputUsername")).sendKeys("rahulshetty@gmail.com");
 		driver.findElement(By.cssSelector("[type='password']")).sendKeys("helo");  //input[type='password'] is exact CSS
 		driver.findElement(By.className("signInBtn")).click();
-		
-		
+
 		String errorMsg = driver.findElement(By.cssSelector("p[class='error']")).getText();
 		
 		if (errorMsg.equals("* Incorrect username or password")); String password = "";{
