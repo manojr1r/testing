@@ -30,7 +30,6 @@ public class Locators {
 			password=paswordString.split("'")[1];
 			driver.findElement(By.className("go-to-login-btn")).click();
 			Thread.sleep(2000);
-			
 		}
 		
 		driver.findElement(By.id("inputUsername")).sendKeys("rahulshetty@gmail.com");
